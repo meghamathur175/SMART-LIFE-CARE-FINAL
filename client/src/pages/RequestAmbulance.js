@@ -33,25 +33,25 @@ function RequestAmbulance() {
   return (
     <div className="request-layout">
       <div className="fixed-navbar-container">
-        <nav className="navbar">
-          <div className="navbar-content">
+        <nav className="request-navbar">
+          <div className="request-navbar-content">
             {/* Logo */}
-            <div className="navbar-logo">
+            <div className="request-navbar-logo">
               <h2>Life+</h2>
             </div>
 
             {/* Navbar Links */}
-            <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-              <Link className="nav-link" to="/track-ambulance">
+            <div className={`request-navbar-links ${menuOpen ? 'open' : ''}`}>
+              <Link className="request-nav-link" to="/track-ambulance">
                 Track Ambulance
               </Link>
-              <Link className="nav-link" to="/SignIn">
+              <Link className="request-nav-link" to="/SignIn">
                 Login
               </Link>
             </div>
 
             {/* Hamburger Icon */}
-            <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+            <div className={`request-hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
               <span className="line"></span>
               <span className="line"></span>
               <span className="line"></span>
