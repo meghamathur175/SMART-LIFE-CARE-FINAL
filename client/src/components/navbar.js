@@ -9,34 +9,34 @@ const Navbar = () => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="navbar">
-      <div className="navbar-content">
-        {/* Hamburger on the far left */}
-        <div className="menu-toggle" onClick={toggleMenu}>
+    <nav className="home-navbar">
+      <div className="home-navbar-content">
+        {/* Hamburger icon (mobile only) */}
+        <div className="home-menu-toggle" onClick={toggleMenu}>
           {menuOpen ? (
-            <span className="close-icon">&times;</span>
+            <span className="home-close-icon">&times;</span>
           ) : (
             <GiHamburgerMenu size={28} color="#2563eb" />
           )}
         </div>
 
-        {/* Logo */}
-        <div className="navbar-logo">
+        {/* Centered logo */}
+        <div className="home-navbar-logo">
           <h2>Life+</h2>
         </div>
-      </div>
 
-      {/* Links below entire navbar in column when menu is open */}
-      <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
-        <Link className="nav-link" to="/request-ambulance" onClick={closeMenu}>
-          Request Ambulance
-        </Link>
-        <Link className="nav-link" to="/track-ambulance" onClick={closeMenu}>
-          Track Ambulance
-        </Link>
-        <Link className="nav-link" to="/SignIn" onClick={closeMenu}>
-          Login
-        </Link>
+        {/* Navbar links */}
+        <div className={`home-navbar-links ${menuOpen ? "home-open" : ""}`}>
+          <Link className="home-nav-link" to="/request-ambulance" onClick={closeMenu}>
+            Request Ambulance
+          </Link>
+          <Link className="home-nav-link" to="/track-ambulance" onClick={closeMenu}>
+            Track Ambulance
+          </Link>
+          <Link className="home-nav-link" to="/SignIn" onClick={closeMenu}>
+            Login
+          </Link>
+        </div>
       </div>
     </nav>
   );
